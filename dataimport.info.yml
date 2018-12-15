@@ -1,0 +1,9 @@
+name: 'Data Import'
+description: 'Custom module to feeds from ndtv site and create corresponding nodes'
+core: 8.x
+package: QED
+type: module
+dependencies:
+  - drupal:migrate
+  - drupal:migrate_plus
+  - drupal:migrate_tools

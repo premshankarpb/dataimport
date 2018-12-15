@@ -1,0 +1,9 @@
+dataimport.import_link:
+ path: '/dataimport/import_link'
+ defaults:
+   _controller: '\Drupal\dataimport\Controller\ImportController::importlink'
+   _title: 'Data import trigger link'
+ requirements:
+   _permission: 'access content'
+   _format: 'html'
+   _access: 'TRUE'

@@ -1,0 +1,24 @@
+id: dataimport_migrate
+migration_tags: null
+migration_group: null
+label: 'Data Import import from URL'
+source:
+  plugin: XML
+  enclosure: '"'
+  path: ​http://feeds.feedburner.com/ndtvnews-top-stories.xml
+  keys:
+    - Title
+process:
+  title: title
+  updated: updatedAt
+  created: pubDate
+  field_guid: guid
+  field_link: link
+  type:
+    plugin: default_value
+    default_value: article
+destination:
+  plugin: entity:node
+migration_dependencies:
+  required: {}
+  optional: {}

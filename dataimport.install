@@ -1,0 +1,14 @@
+<?php
+/**
+ * @file
+ * Contains dataimport.install.
+ */
+
+/**
+ * Implements hook_uninstall().
+ *
+ * Removes stale migration configs during uninstall.
+ */
+function dataimport_uninstall() {
+   \Drupal::configFactory()->getEditable('migrate_plus.migration.dataimport_migrate')->delete();
+}
